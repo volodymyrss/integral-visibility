@@ -1,4 +1,4 @@
-import pyfits
+import astropy.io.fits as pyfits
 import healpy
 import healtics
 
@@ -7,7 +7,7 @@ from integralclient import converttime
 import ephem
 from astropy.coordinates import SkyCoord
 from astropy import units as u
-import ephem    
+#import ephem    
 from numpy import *
 
 class Visibility:
