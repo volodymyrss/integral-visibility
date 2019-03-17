@@ -30,18 +30,18 @@ class Visibility:
         doy=ijd-ijd02-year*yeard
         
         if coord is None:
-            print "get grid..."
+            print("get grid...")
             coord=self.get_grid(nsides)        
 
         
         sun=ephem.Sun(ijd-ijd02-ephem.Date("2002/01/01"))
         sun_coord=SkyCoord(sun.ra,sun.dec,unit=u.rad,representation="spherical")
         
-        print "sun coord",sun_coord
+        print("sun coord",sun_coord)
 
         vmap=zeros(coord.shape[0])
         
-        print "will compute map..",coord.shape
+        print("will compute map..",coord.shape)
         
         sep=coord.separation(sun_coord).deg
         vmap[(sep>90-self.minsolarangle) & (sep<90+self.minsolarangle)]=1
