@@ -1,10 +1,21 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
+from setuptools import setup
 
-setup(name='integral-visibility',
-      version='0.1',
-      description='integral-visibility',
-      author='V.S.',
-      py_modules=['integralvisibility'],
-     )
+
+setup(
+        name='integral-visibility',
+        version='1.0.0',
+        py_modules= ['integralvisibility'],
+        url="http://odahub.io",
+        package_data     = {
+            "": [
+                "*.txt",
+                "*.md",
+                "*.rst",
+                "*.py"
+                ]
+            },
+        license='Creative Commons Attribution-Noncommercial-Share Alike license',
+        long_description=open('README.md').read(),
+        )
