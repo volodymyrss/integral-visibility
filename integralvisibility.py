@@ -14,6 +14,7 @@ class Visibility:
     def __init__(self,minsolarangle=30):
         self.ijd02=float(converttime("UTC","2002-01-01T00:00:00","IJD"))
         self.ijd12=float(converttime("UTC","2012-01-01T00:00:00","IJD"))
+        self.minsolarangle = minsolarangle
 
     def get_grid(self,nsides):
         theta,phi=healpy.pix2ang(nsides,arange(healpy.nside2npix(nsides)))
