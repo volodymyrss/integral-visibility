@@ -18,7 +18,7 @@ class Visibility:
 
     def get_grid(self,nsides):
         theta,phi=healpy.pix2ang(nsides,arange(healpy.nside2npix(nsides)))
-        return SkyCoord(phi,theta,1,unit=u.rad,representation="physicsspherical")
+        return SkyCoord(phi,theta,1,unit=u.rad,representation_type="physicsspherical")
         
     def for_time(self,t,coord=None,nsides=16):
         ijd=float(converttime("ANY",t,"IJD"))
@@ -36,7 +36,7 @@ class Visibility:
 
         
         sun=ephem.Sun(ijd-ijd02-ephem.Date("2002/01/01"))
-        sun_coord=SkyCoord(sun.ra,sun.dec,unit=u.rad,representation="spherical")
+        sun_coord=SkyCoord(sun.ra,sun.dec,unit=u.rad,representation_type="spherical")
         
         print("sun coord",sun_coord)
 
