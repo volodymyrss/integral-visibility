@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
         name='integral-visibility',
-        version='1.0.1',
+        version='1.0.2',
         py_modules= ['integralvisibility'],
         url="http://odahub.io",
         package_data     = {
